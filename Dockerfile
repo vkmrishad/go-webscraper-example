@@ -2,16 +2,20 @@
 
 FROM golang:1.18
 
-WORKDIR /app
+# Set the Current Working Directory inside the container
+WORKDIR $GOPATH/src/github.com/vkmrishad/go-webscraper-example
 
-COPY go.mod ./
-COPY go.sum ./
-RUN go mod download
+# Copy everything from the current directory to the PWD (Present Working Directory) inside the container
+COPY . .
 
-COPY *.go ./
+# Download all the dependencies
+RUN go get -d -v ./...
 
-RUN go build -o /docker-gs-ping
+# Install the package
+RUN go install -v ./...
 
+# This container exposes port 8080 to the outside world
 EXPOSE 8080
 
-CMD [ "/docker-gs-ping" ]
+# Run the executable
+CMD ["go-webscraper-example"]
