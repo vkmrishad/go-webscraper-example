@@ -29,9 +29,10 @@ type ScraperRequestBody struct {
 }
 
 type ScraperResponse struct {
-	Url          string       `json:"url"`
-	HtmlVersion  string       `json:"html_version"`
-	PageTitle    string       `json:"page_title"`
-	HeadingCount HeadingCount `json:"heading_count"`
-	Links        AllLinks     `json:"links"`
+	Url                   string       `json:"url"`
+	HtmlVersion           string       `json:"html_version"`
+	PageTitle             string       `json:"page_title"`
+	HeadingCount          HeadingCount `json:"heading_count"`
+	Links                 AllLinks     `json:"links"`
+	PageContainsLoginForm bool         `json:"page_contains_login_form"`
 }

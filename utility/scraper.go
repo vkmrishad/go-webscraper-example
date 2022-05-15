@@ -19,6 +19,7 @@ const (
 )
 
 var internalUrlsExceptions = []string{"mailto:", "tel:"}
+var loginPageSlugList = []string{"login", "log-in", "signin", "sign-in"}
 var doctypes = make(map[string]string)
 
 func init() {
@@ -111,7 +112,6 @@ func getAllLinks(doc goquery.Document) models.AllLinks {
 	var externalUrls []string
 	doc.Find("a[href]").Each(func(index int, item *goquery.Selection) {
 		href, _ := item.Attr("href")
-		// fmt.Printf("link: %s - anchor text: %s\n", href, item.Text())
 
 		u, err := url.Parse(href)
 		if err != nil {
@@ -173,14 +173,56 @@ func getAllLinks(doc goquery.Document) models.AllLinks {
 	return links
 }
 
+func getPageContainsLoginForm(link string, doc goquery.Document) bool {
+	// Attempt to find login form, but not a consistent logic
+	// Check page contains login form
+	is_login_form := false
+	is_login_url := false
+	email := false
+	password := false
+	other := false
+
+	// Check login slug terms in URL
+	for _, b := range loginPageSlugList {
+		if strings.Contains(link, b) {
+			is_login_url = true
+		}
+	}
+
+	doc.Find("input[type]").Each(func(index int, item *goquery.Selection) {
+		_type, _ := item.Attr("type")
+
+		if _type == "password" {
+			password = true
+		}
+
+		if _type == "email" {
+			email = true
+		}
+
+		if _type != "text" {
+			other = true
+		}
+	})
+
+	fmt.Print(is_login_url, password, email, other)
+
+	if is_login_url || (password && (email || other) && (other && !email)) {
+		is_login_form = true
+	}
+
+	return is_login_form
+}
+
 func WebScraper(link string, doc goquery.Document) models.ScraperResponse {
 	// All scraper functions response merged
 	jsonData := models.ScraperResponse{
-		Url:          link,
-		HtmlVersion:  getHtmlVersion(doc),
-		PageTitle:    getPageTitle(doc),
-		HeadingCount: getHeadingCount(doc),
-		Links:        getAllLinks(doc),
+		Url:                   link,
+		HtmlVersion:           getHtmlVersion(doc),
+		PageTitle:             getPageTitle(doc),
+		HeadingCount:          getHeadingCount(doc),
+		Links:                 getAllLinks(doc),
+		PageContainsLoginForm: getPageContainsLoginForm(link, doc),
 	}
 	return jsonData
 }

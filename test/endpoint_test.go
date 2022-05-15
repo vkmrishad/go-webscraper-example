@@ -73,7 +73,7 @@ func TestScraperHandlerUrlRequired(t *testing.T) {
 			status, http.StatusBadRequest)
 	}
 
-	expected := `{"validationError":{"Url":["This field is required"]}}`
+	expected := `{"validation_errors":{"Url":["This field is required"]}}`
 	if strings.Trim(rr.Body.String(), " \r\n") != expected {
 		t.Errorf("handler returned unexpected body: got %v want %v",
 			strings.Trim(rr.Body.String(), " \r\n"), expected)
@@ -97,7 +97,7 @@ func TestScraperHandlerUrlFormatCheck(t *testing.T) {
 			status, http.StatusBadRequest)
 	}
 
-	expected := `{"validationError":{"Url":["Not a valid URL"]}}`
+	expected := `{"validation_errors":{"Url":["Not a valid URL"]}}`
 	if strings.Trim(rr.Body.String(), " \r\n") != expected {
 		t.Errorf("handler returned unexpected body: got %v want %v",
 			strings.Trim(rr.Body.String(), " \r\n"), expected)

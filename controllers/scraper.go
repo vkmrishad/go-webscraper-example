@@ -25,7 +25,7 @@ func ScraperHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	if errors := utility.Validate(requestBody); len(errors) > 0 {
-		err := map[string]interface{}{"validationError": errors}
+		err := map[string]interface{}{"validation_errors": errors}
 		w.WriteHeader(http.StatusBadRequest)
 		json.NewEncoder(w).Encode(err)
 		return
