@@ -1,5 +1,6 @@
 # go-webscraper-example
 
+[![GitHub go.mod Go version of a Go module](https://img.shields.io/github/go-mod/go-version/vkmrishad/go-webscraper-example.svg)](https://github.com/vkmrishad/go-webscraper-example)
 [![Lint Status](https://github.com/vkmrishad/go-webscraper-example/workflows/test/badge.svg)](https://github.com/vkmrishad/go-webscraper-example/actions)
 
 A web application which takes a website URL as an input and provides general information
@@ -9,7 +10,7 @@ about the contents of the page
 - Headings count by level
 - Amount of internal and external links
 - Amount of inaccessible links
-- If a page contains a login form
+- ~~If a page contains a login form~~
 
 ## Clone the project
 
@@ -43,7 +44,7 @@ Server URL: http://127.0.0.1:8080
 
 ## Example Request and Response
 
-Endpint: [POST]http://127.0.0.1:8080/scraper/
+Endpoint: [POST]http://127.0.0.1:8080/scraper/
 
 Request
 ```
