@@ -205,12 +205,9 @@ func getPageContainsLoginForm(link string, doc goquery.Document) bool {
 		}
 	})
 
-	fmt.Print(is_login_url, password, email, other)
-
 	if is_login_url || (password && (email || other) && (other && !email)) {
 		is_login_form = true
 	}
-
 	return is_login_form
 }
 
