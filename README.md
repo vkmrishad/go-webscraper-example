@@ -150,6 +150,7 @@ Response
                 "count": 4
             }
         }
-    }
+    },
+    "page_contains_login_form": false
 }
 ```
