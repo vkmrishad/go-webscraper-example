@@ -1,23 +1,4 @@
-run:
- # default concurrency is a available CPU number
- concurrency: 4
-
- # timeout for analysis, e.g. 30s, 5m, default is 1m
- deadline: 2m
-
- skip-files:
-   - gen.go
-
-     # modules-download-mode: vendor
-
-
-linters:
- disable:
-   - errcheck
-   - gochecknoglobals
-   - dupl
- presets:
-   - bugs
-   - unused
-   - complexity
-   - style
+- repo: https://github.com/golangci/golangci-lint
+  rev: v1.41.1
+  hooks:
+    - id: golangci-lint
