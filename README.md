@@ -142,7 +142,6 @@ Response
         "failed": {
             "urls": [
                 "mailto:mohammedrishad.vk@gmail.com",
-                "https://www.linkedin.com/in/vkmrishad",
                 "https://moonllight.com/"
             ],
             "count": 3

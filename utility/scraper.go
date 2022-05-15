@@ -70,9 +70,7 @@ func fetchUrl(url string, chFailedUrls chan string, chIsFinished chan bool) {
 	}()
 
 	// If url could not be opened, we inform the channel chFailedUrls:
-	if err != nil || (
-		resp.StatusCode != http.StatusOK && resp.StatusCode != http.StatusTooManyRequests && resp.StatusCode != 999
-		) {
+	if err != nil || (resp.StatusCode != http.StatusOK && resp.StatusCode != http.StatusTooManyRequests && resp.StatusCode != 999) {
 		chFailedUrls <- url
 		return
 	}
