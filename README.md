@@ -10,7 +10,7 @@ about the contents of the page
 - Headings count by level
 - Amount of internal and external links
 - Amount of inaccessible links
-- If a page contains a login form (NB: Login is not consistent)
+- If a page contains a login form (NB: Logic is not perfect)
 
 ## Clone the project
 
@@ -42,21 +42,21 @@ $ cd go-webscraper-example
     └── scraper.go
 ```
 
-## Runserver using run command
+## Run server using run command
 ```
 $ go run .
 or 
 $ go run main.go
 ```
 
-## Runserver using build
+## Run server from build
 
 ```
 $ go build .
 $ ./go-webscraper-example
 ```
 
-## Runserver using Docker
+## Run server using Docker
 
 ```
 $ docker build -t go-webscraper-example . --rm
@@ -69,7 +69,7 @@ $ docker run -p 8080:8080 --name go-webscraper-example --rm go-webscraper-exampl
 $ go test ./test -v
 ```
 
-Server URL: http://127.0.0.1:8080
+Server URL: http://127.0.0.1:8080/
 
 ## Example Request and Response
 
