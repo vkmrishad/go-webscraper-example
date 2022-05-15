@@ -107,7 +107,7 @@ func getHeadingCount(doc goquery.Document) models.HeadingCount {
 	return headings
 }
 
-func getAllLinks(doc goquery.Document) models.AllLinks {
+func getAllLinks(doc goquery.Document) models.Links {
 	var internalUrls []string
 	var externalUrls []string
 	doc.Find("a[href]").Each(func(index int, item *goquery.Selection) {
@@ -154,22 +154,21 @@ func getAllLinks(doc goquery.Document) models.AllLinks {
 		}
 	}
 
-	links := models.AllLinks{
-		Links: models.Links{
-			Internal: models.LinkDetails{
-				Urls:  internalUrls,
-				Count: len(internalUrls),
-			},
-			External: models.LinkDetails{
-				Urls:  externalUrls,
-				Count: len(externalUrls),
-			},
-			Failed: models.LinkDetails{
-				Urls:  failedUrls,
-				Count: len(failedUrls),
-			},
+	links := models.Links{
+		Internal: models.LinkDetails{
+			Urls:  internalUrls,
+			Count: len(internalUrls),
+		},
+		External: models.LinkDetails{
+			Urls:  externalUrls,
+			Count: len(externalUrls),
+		},
+		Failed: models.LinkDetails{
+			Urls:  failedUrls,
+			Count: len(failedUrls),
 		},
 	}
+
 	return links
 }
 

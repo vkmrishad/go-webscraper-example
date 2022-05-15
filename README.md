@@ -103,52 +103,49 @@ Response
         "h6": 0
     },
     "links": {
-        "links": {
-            "internal": {
-                "urls": [
-                    "https://www.mohammedrishad.com/#body",
-                    "https://www.mohammedrishad.com/#skill_sec",
-                    "https://www.mohammedrishad.com/#work_sec",
-                    "https://www.mohammedrishad.com/#edu_sec",
-                    "https://www.mohammedrishad.com/#exp_sec",
-                    "https://www.mohammedrishad.com/#achivement_sec",
-                    "https://www.mohammedrishad.com/#interest_sec",
-                    "https://www.mohammedrishad.com/#contact_sec",
-                    "https://www.mohammedrishad.com/#body",
-                    "https://www.mohammedrishad.com/MohammedRishadResume.pdf",
-                    "https://www.mohammedrishad.com/#body"
-                ],
-                "count": 11
-            },
-            "external": {
-                "urls": [
-                    "https://studysmarter.de",
-                    "https://uoc.ac.in/",
-                    "https://www.nuflights.com/",
-                    "https://www.cliphire.co/",
-                    "https://moonllight.com/",
-                    "https://transportsimple.com/",
-                    "https://www.etailpet.com/",
-                    "https://www.feedmyfurbaby.co.nz/",
-                    "mailto:mohammedrishad.vk@gmail.com",
-                    "https://www.linkedin.com/in/vkmrishad",
-                    "https://github.com/vkmrishad",
-                    "https://stackoverflow.com/users/6874947/mohammed-rishad",
-                    "https://www.facebook.com/vkmrishad",
-                    "https://www.twitter.com/vkmrishad",
-                    "https://www.youtube.com/channel/UCvnIlVDRk46_xpnrrAiYrTg"
-                ],
-                "count": 15
-            },
-            "failed": {
-                "urls": [
-                    "mailto:mohammedrishad.vk@gmail.com",
-                    "https://moonllight.com/",
-                    "https://uoc.ac.in/",
-                    "https://www.linkedin.com/in/vkmrishad"
-                ],
-                "count": 4
-            }
+        "internal": {
+            "urls": [
+                "https://www.mohammedrishad.com/#body",
+                "https://www.mohammedrishad.com/#skill_sec",
+                "https://www.mohammedrishad.com/#work_sec",
+                "https://www.mohammedrishad.com/#edu_sec",
+                "https://www.mohammedrishad.com/#exp_sec",
+                "https://www.mohammedrishad.com/#achivement_sec",
+                "https://www.mohammedrishad.com/#interest_sec",
+                "https://www.mohammedrishad.com/#contact_sec",
+                "https://www.mohammedrishad.com/#body",
+                "https://www.mohammedrishad.com/MohammedRishadResume.pdf",
+                "https://www.mohammedrishad.com/#body"
+            ],
+            "count": 11
+        },
+        "external": {
+            "urls": [
+                "https://studysmarter.de",
+                "https://uoc.ac.in/",
+                "https://www.nuflights.com/",
+                "https://www.cliphire.co/",
+                "https://moonllight.com/",
+                "https://transportsimple.com/",
+                "https://www.etailpet.com/",
+                "https://www.feedmyfurbaby.co.nz/",
+                "mailto:mohammedrishad.vk@gmail.com",
+                "https://www.linkedin.com/in/vkmrishad",
+                "https://github.com/vkmrishad",
+                "https://stackoverflow.com/users/6874947/mohammed-rishad",
+                "https://www.facebook.com/vkmrishad",
+                "https://www.twitter.com/vkmrishad",
+                "https://www.youtube.com/channel/UCvnIlVDRk46_xpnrrAiYrTg"
+            ],
+            "count": 15
+        },
+        "failed": {
+            "urls": [
+                "mailto:mohammedrishad.vk@gmail.com",
+                "https://www.linkedin.com/in/vkmrishad",
+                "https://moonllight.com/"
+            ],
+            "count": 3
         }
     },
     "page_contains_login_form": false
