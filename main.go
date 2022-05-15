@@ -11,7 +11,7 @@ import (
 func main() {
 	router := mux.NewRouter()
 	router.HandleFunc("/health-check", controllers.HealthCheckHandler).Methods("GET")
-	router.HandleFunc("/scraper", controllers.ScraperHandler).Methods("POST")
+	router.HandleFunc("/scraper/", controllers.ScraperHandler).Methods("POST")
 	http.Handle("/", router)
 
 	//start and listen to requests
