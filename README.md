@@ -19,6 +19,29 @@ git clone https://github.com/vkmrishad/go-webscraper-example.git
 $ cd go-webscraper-example
 ```
 
+## Project tree
+
+```
+.
+├── Dockerfile
+├── README.md
+├── controllers
+│   ├── common.go
+│   └── scraper.go
+├── go-webscraper-example
+├── go.mod
+├── go.sum
+├── main.go
+├── models
+│   ├── common.go
+│   └── scraper.go
+├── test
+│   └── endpoint_test.go
+└── utility
+    ├── common.go
+    └── scraper.go
+```
+
 ## Runserver using run command
 ```
 $ go run .
