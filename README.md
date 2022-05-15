@@ -15,11 +15,11 @@ about the contents of the page
 ## Clone the project
 
 ```
-git clone https://github.com/vkmrishad/go-webscraper-example.git
+$ git clone https://github.com/vkmrishad/go-webscraper-example.git
 $ cd go-webscraper-example
 ```
 
-## Project tree
+## Project structure
 
 ```
 .
@@ -42,21 +42,21 @@ $ cd go-webscraper-example
     └── scraper.go
 ```
 
-## Run server using run command
+## Run API server using run command
 ```
 $ go run .
 or 
 $ go run main.go
 ```
 
-## Run server from build
+## Run API server from build
 
 ```
 $ go build .
 $ ./go-webscraper-example
 ```
 
-## Run server using Docker
+## Run API server using Docker
 
 ```
 $ docker build -t go-webscraper-example . --rm
