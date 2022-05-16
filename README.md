@@ -19,6 +19,12 @@ $ git clone https://github.com/vkmrishad/go-webscraper-example.git
 $ cd go-webscraper-example
 ```
 
+## Install dependencies
+
+```
+$ go get
+```
+
 ## Project structure
 
 ```
